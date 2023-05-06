@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Intro component with sign up form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+  </head>
+  <body
+    class="bg-[url('./images/bg-intro-mobile.png')] bg-themeRed font-themeFont"
+  >
+    <article class="px-6 mt-28 lg:flex lg:justify-center lg:align-center mb-10">
+      <section
+        class="text-center lg:flex lg:flex-col lg:align-center lg:justify-center lg:text-left lg:p-10 lg:w-[600px]"
+      >
+        <h1 class="text-white text-2xl px-4 font-bold lg:p-0 lg:text-4xl">
+          Learn to code by watching others
+        </h1>
+        <p class="text-gray-200 text-sm mt-4 mb-12 leading-6">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </section>
+      <section class="lg:w-[600px]">
+        <div
+          class="bg-themeBlue py-4 px-20 text-center text-gray-200 text-xs rounded-lg leading-5 mb-6 shadow-[0_5px_0px_0px_rgba(0,0,0,0.2)]"
+        >
+          <span class="text-white font-bold">Try it free 7 days</span> then
+          $20/mo. thereafter
+        </div>
+        <div
+          class="flex flex-col justify-center align-center text-center shadow-[0_5px_0px_0px_rgba(0,0,0,0.2)] bg-white rounded-lg p-4 lg:p-8"
+        >
+          <form>
+            <div class="relative">
+              <input
+                type="text"
+                name="fname"
+                id="fname"
+                placeholder="First Name"
+                required
+                class="border-2 rounded-md p-3 placeholder-themeDarkBlue text-sm w-[100%] my-2 invalid:outline-themeRed"
+              />
+              <img
+                src="./images/icon-error.svg"
+                alt="error"
+                width="20"
+                class="absolute right-[20px] top-[20px] error hidden"
+              />
+              <p
+                class="text-themeRed text-[10px] relative right-[0px] error hidden"
+              >
+                First Name Cannot be empty
+              </p>
+            </div>
+
+            <div class="relative">
+              <input
+                type="text"
+                name="lname"
+                id="lname"
+                placeholder="Last Name"
+                required
+                class="border-2 rounded-md p-3 placeholder-themeDarkBlue text-sm w-[100%] my-2 invalid:outline-themeRed"
+              />
+              <img
+                src="./images/icon-error.svg"
+                alt="error"
+                width="20"
+                class="absolute right-[20px] top-[20px] error hidden"
+              />
+              <p
+                class="text-themeRed text-[10px] relative right-[0px] error hidden"
+              >
+                Last Name Cannot be empty
+              </p>
+            </div>
+
+            <div class="relative">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email Address"
+                required
+                class="border-2 rounded-md p-3 placeholder-themeDarkBlue text-sm w-[100%] my-2 invalid:outline-themeRed"
+              />
+              <img
+                src="./images/icon-error.svg"
+                alt="error"
+                width="20"
+                class="absolute right-[20px] top-[20px] error hidden"
+              />
+              <p
+                class="text-themeRed text-[10px] relative right-[0px] error hidden"
+              >
+                Email Cannot be empty
+              </p>
+            </div>
+
+            <div class="relative">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="password"
+                required
+                class="border-2 rounded-md p-3 placeholder-themeDarkBlue text-sm w-[100%] my-2 invalid:outline-themeRed"
+              />
+              <img
+                src="./images/icon-error.svg"
+                alt="error"
+                width="20"
+                class="absolute right-[20px] top-[20px] error hidden"
+              />
+              <p
+                class="text-themeRed text-[10px] relative right-[0px] error hidden"
+              >
+                Password Cannot be empty
+              </p>
+            </div>
+
+            <input
+              type="submit"
+              id="submit"
+              value="CLAIM YOUR FREE TRIAL"
+              class="bg-themeGreen p-3 text-white rounded-lg text-sm shadow-[0_2px_0px_0px_rgba(0,0,0,0.4)] my-2 w-[100%] mb-4 hover:bg-themeGreenHover"
+            />
+          </form>
+          <p class="text-[10px] text-gray-400">
+            By clicking the button, you are agreeing to our
+            <a href="#" class="text-themeRed">Terms and Services</a>
+          </p>
+        </div>
+      </section>
+    </article>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

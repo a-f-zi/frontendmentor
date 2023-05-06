@@ -1,0 +1,113 @@
+body {
+    background: hsl(30, 38%, 92%);
+    margin: 0;
+    display: flex;
+    min-height: calc(100vh - 0.1px);
+    align-items: center;
+    justify-content: center;
+}
+.center {
+    max-width: 600px;
+    height: 450px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 1rem;
+}
+#main-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.product-image {
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url(./images/image-product-desktop.jpg);
+    background-size: cover;
+}
+.product-info {
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    padding: 0.5rem 1.2rem 1rem 2.2rem;
+    box-sizing: border-box;
+}
+.text {
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    margin: 1rem 0 0 0;
+    color: hsl(228, 12%, 48%);
+    line-height: 1.5rem;
+}
+.top {
+    letter-spacing: 0.4rem;
+    font-size: 14px;
+    margin-bottom: 1.2rem;
+}
+.heading {
+    font-family: "Fraunces", serif;
+    margin: 1rem 0;
+    color: hsl(212, 21%, 14%);
+    font-size: 35px;
+    line-height: 2rem;
+    margin: 0 0 1.3rem 0;
+}
+#price-container {
+    display: flex;
+    align-items: center;
+}
+#original-price {
+    display: inline-block;
+    color: hsl(228, 12%, 48%);
+    margin: 0 0 0 1rem;
+}
+#discounted-price {
+    display: inline-block;
+    color: hsl(158, 36%, 37%);
+    font-size: 33px;
+    font-family: "Fraunces", serif;
+    margin: 1.7rem 0;
+}
+#button-add {
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    color: #fff;
+    padding: 0.8rem;
+    border-radius: 10px;
+    width: 100%;
+}
+#button-add:hover{
+    background-color: #1A4031;
+    cursor: pointer;
+}
+#btn-text {
+    margin: 1rem 0.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+@media screen and (max-width:540px) {
+    .center {
+        max-width: 100%;
+        height: 91vh;
+        margin: 0 1rem 1rem 1rem;
+        overflow: auto;
+        overflow-x: hidden;
+    }
+    #main-card {
+        flex-direction: column;
+    }
+    .product-image {
+        width: 100%;
+        height: 100%;
+    }
+    .product-info {
+        width: 100%;
+        height: 55%;
+        padding: 1rem 2rem;
+    }
+    #button-add {
+        margin-bottom: 1rem;
+    }
+}

@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+:root {
+  --lightRed: hsl(0, 100%, 67%);
+  --orangyYellow: hsl(39, 100%, 56%);
+  --greenTeal: hsl(166, 100%, 37%);
+  --cobaltBlue: hsl(234, 85%, 45%);
+  --white: hsl(0, 0%, 100%);
+  --paleBlue: hsl(221, 100%, 96%);
+  --lightLavender: hsl(241, 100%, 89%);
+  --darkGrayBlue: hsl(224, 30%, 27%);
+  --fontSize: 18px;
+  --fontFamily: "Hanken Grotesk", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fontFamily);
+  font-size: var(--fontSize);
+  background: var(--paleBlue);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.result-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  border-radius: 0 0 25px 25px;
+  background: rgb(103, 67, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(103, 67, 255, 1) 0%,
+    rgba(80, 55, 245, 1) 81%,
+    rgba(51, 45, 233, 1) 100%
+  );
+}
+
+.circle {
+  background: rgb(77, 34, 201);
+  background: linear-gradient(
+    180deg,
+    rgba(77, 34, 201, 1) 55%,
+    rgba(71, 52, 240, 0.2) 100%
+  );
+  border-radius: 50%;
+  padding: 1.5rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.circle p {
+  font-size: 0.8rem;
+}
+
+#number {
+  color: var(--white);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.result-total p {
+  text-align: center;
+  color: var(--lightLavender);
+  display: flex;
+}
+
+.result-total > p {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.result-total > h3 {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: var(--lightLavender);
+}
+
+.result-total > h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+
+.result-details {
+  padding: 1rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+.result-details > h3 {
+  color: var(--darkGrayBlue);
+  margin-bottom: 1rem;
+}
+
+.result-details > button {
+  background-color: var(--darkGrayBlue);
+  color: var(--white);
+  width: 100%;
+  border-radius: 25px;
+  height: 3rem;
+  border: none;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.card {
+  display: flex;
+  background-color: gray;
+  margin: 0.8rem 0;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 0.5rem;
+  color: var(--darkGrayBlue);
+  font-size: 0.8rem;
+}
+
+.card img {
+  width: 15px;
+  height: 15px;
+}
+
+.card span {
+  color: black;
+  font-weight: 800;
+  margin-right: 0.3rem;
+}
+
+.card > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reaction p {
+  color: var(--lightRed);
+  margin-left: 0.3rem;
+}
+
+.memory p {
+  color: var(--orangyYellow);
+  margin-left: 0.3rem;
+}
+
+.verbal p {
+  color: var(--greenTeal);
+  margin-left: 0.3rem;
+}
+
+.visual p {
+  color: var(--cobaltBlue);
+  margin-left: 0.3rem;
+}
+
+.reaction {
+  background: hsla(0, 100%, 67%, 0.1);
+}
+
+.memory {
+  background: hsla(39, 100%, 56%, 0.1);
+}
+
+.verbal {
+  background: hsla(166, 100%, 37%, 0.1);
+}
+
+.visual {
+  background: hsla(234, 85%, 45%, 0.1);
+}
+
+button:hover {
+  cursor: pointer;
+  background: rgb(103, 67, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(103, 67, 255, 1) 0%,
+    rgba(80, 55, 245, 1) 81%,
+    rgba(51, 45, 233, 1) 100%
+  );
+}
+
+@media screen and (min-width: 765px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    flex-direction: row;
+    width: auto;
+    background-color: var(--white);
+    border-radius: 25px;
+  }
+
+  .result-total {
+    border-radius: 25px;
+    width: 50%;
+    padding: 2rem;
+  }
+
+  .result-total h4 {
+    font-size: 1.4rem;
+  }
+
+  .result-total h3 {
+    font-size: 1rem;
+  }
+
+  .result-total > p {
+    padding: 0 2rem;
+    font-size: 0.8rem;
+  }
+
+  .circle {
+    width: 90px;
+    height: 90px;
+    margin: 0.8rem 0 2rem 0;
+  }
+
+  .result-details {
+    background: var(--white);
+    border-radius: 25px;
+    width: 50%;
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  body {
+    height: auto;
+    margin: 0.5rem 0;
+  }
+}

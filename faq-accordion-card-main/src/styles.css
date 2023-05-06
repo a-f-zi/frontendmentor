@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.themeBgGradient {
+  background: linear-gradient(
+    180deg,
+    rgba(174, 103, 232, 1) 0%,
+    rgba(139, 102, 233, 1) 50%,
+    rgba(102, 99, 230, 1) 100%
+  );
+}

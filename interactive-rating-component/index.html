@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+</head>
+<body>
+  
+  <article id="main-card">
+    <div id="image-container">
+      <img src="./images/icon-star.svg" alt="" aria-hidden=“true”>
+    </div>
+    <p id="heading">How did we do?</p>
+    <p id="text">
+      Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!
+    </p>
+    <form action="" id="form">
+      <fieldset id="radio-container">
+        <label for="1">
+          <input type="radio" name="rating" id="1" value="1" required>
+          <span class="checkmark">1</span>
+        </label>
+        <label for="2">
+          <input type="radio" name="rating" id="2" value="2" required>
+          <span class="checkmark">2</span>
+        </label>
+        <label for="3">
+          <input type="radio" name="rating" id="3" value="3" required>
+          <span class="checkmark">3</span>
+        </label>
+        <label for="4">
+          <input type="radio" name="rating" id="4" value="4" required>
+          <span class="checkmark">4</span>
+        </label>
+        <label for="5">
+          <input type="radio" name="rating" id="5" value="5" required>
+          <span class="checkmark">5</span>
+        </label>
+      </fieldset>
+      <input type="submit" value="submit">
+    </form>
+  </article>
+  <article id="feedback-card" class="hidden">
+    <img src="./images/illustration-thank-you.svg" alt="" aria-hidden="true">
+    <div id="rating-box">
+      <p>You selected <span id="rating"></span> out of 5</p>
+    </div>
+    <p class="heading">Thank you!</p>
+    <p class="text">
+      We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!
+    </p>
+  </article>
+
+  <script src="main.js"></script>
+</body>
+</html>

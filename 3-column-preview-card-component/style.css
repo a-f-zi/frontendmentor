@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-whtie: hsla(0, 0%, 100%, 0.75);
+    --ver-light-gray: hsl(0, 0%, 95%);
+    --font-size: 15px;
+    --font-normal: 'Lexend Deca', sans-serif;
+    --font-bold: 'Big Shoulders Display', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--ver-light-gray);
+    height: calc(100vh - 0.1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-card {
+    width: 900px;
+    height: 440px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+#first-card {
+    background-color: var(--bright-orange);
+    height: 100%;
+    width: 100%;
+    flex-basis: 33.33%;
+    padding: 40px 50px 40px 40px;
+}
+
+#second-card {
+    background-color: var(--dark-cyan);
+    height: 100%;
+    width: 100%;
+    flex-basis: 33.33%;
+    padding: 40px 50px 40px 40px;
+}
+
+#third-card {
+    background-color: var(--very-dark-cyan);
+    height: 100%;
+    width: 100%;
+    flex-basis: 33.33%;
+    padding: 40px 50px 40px 40px;
+}
+
+.image {
+    margin-bottom: 30px;
+}
+
+.heading {
+    font-family: var(--font-bold);
+    color: var(--ver-light-gray);
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.paragraph {
+    font-family: var(--font-normal);
+    color: var(--transparent-whtie);
+    font-size: var(--font-size);
+    margin-bottom: 80px;
+}
+
+.button {
+    border: 1px solid var(--ver-light-gray);
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: var(--ver-light-gray);
+    font-family: var(--font-normal);
+    font-size: 0.9rem;
+}
+
+.button:hover {
+    background-color: var(--ver-light-gray);
+    cursor: pointer;
+    color: black;
+}
+
+.one:hover {
+    color: var(--bright-orange);
+}
+
+.two:hover {
+    color: var(--dark-cyan);
+}
+
+.three:hover {
+    color: var(--very-dark-cyan);
+}
+
+@media screen and (max-width: 750px) {
+    body {
+        padding: 40px 0 0 0;
+        justify-content: flex-start;
+    }
+
+    #main-card {
+        margin: auto 20px;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    body {
+        padding: 20px 20px;
+    }
+    #main-card {
+        margin: auto;
+    }
+}

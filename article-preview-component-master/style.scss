@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+$veryDarkGrayishBlue: hsl(217, 19%, 35%);
+$desaturatedDarkBlue: hsl(214, 17%, 51%);
+$grayishBlue: hsl(212, 23%, 69%);
+$lightGrayishBlue: hsl(210, 46%, 95%);
+$fontSize: 13px;
+$fontFamily: 'Manrope', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $lightGrayishBlue;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  padding: 5px 0;
+}
+
+#main-card {
+  width: 350px;
+  height: auto;
+  margin: auto 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba($color: #000000, $alpha: 0.1);
+}
+
+#space {
+  display: none;
+}
+
+#left-picture {
+  height: 225px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+#left-picture img {
+  width: 100%;
+}
+
+#right-content {
+  padding: 40px 30px 10px 30px;
+}
+
+#heading {
+  color: $veryDarkGrayishBlue;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+#text {
+  color: $desaturatedDarkBlue;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 35px;
+}
+
+#author-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  position: relative;
+
+  #profile {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+
+  #left {
+    display: flex;
+    align-items: center;
+  }
+
+  #button {
+    background-color: $lightGrayishBlue;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+      background-color: $veryDarkGrayishBlue;
+      cursor: pointer;
+
+      #share-icon {
+        filter: brightness(307%);
+      }
+    }
+
+    &:active {
+      background-color: $desaturatedDarkBlue;
+    }
+  }
+
+  #share-icon {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+#name {
+  color: $veryDarkGrayishBlue;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+#date {
+  color: $grayishBlue;
+  font-size: 14px;
+}
+
+#button-container {
+  position: static;
+  overflow: hidden;
+}
+
+#popup {
+  width: calc(100% + 60px);
+  height: 90px;
+  background-color: $veryDarkGrayishBlue;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 25px;
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: -25px;
+  left: -30px;
+
+  p {
+    text-transform: uppercase;
+    color: $grayishBlue;
+    letter-spacing: 3px;
+    font-size: 16px;
+    margin-left: 0px;
+  }
+
+  img {
+    margin-left: 20px;
+    width: 24px;
+  }
+}
+
+.hide {
+  visibility: hidden;
+  animation: fadeIn 0.5s;
+}
+
+@media screen and (max-height: 560px) {
+  #main-card {
+    margin: auto 20px;
+  }
+
+  body {
+    padding: 20px 0;
+    flex-wrap: wrap;
+  }
+
+  #space {
+    display: block;
+    width: 100%;
+    height: 20px;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  #main-card {
+    width: 800px;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #left-picture {
+    border-radius: 10px 0 0 10px;
+    height: 350px;
+    width: 300px;
+    overflow: hidden;
+  }
+
+  #left-picture img {
+    width: 400px;
+    height: 350px;
+  }
+
+  #right-content {
+    height: 350px;
+    width: 500px;
+    padding: 40px 40px 10px 40px;
+  }
+
+  #heading {
+    font-size: 1.5rem;
+  }
+
+  #text {
+    font-size: 0.95rem;
+    line-height: 23px;
+  }
+
+  #popup {
+    width: 220px;
+    height: 50px;
+    background-color: $veryDarkGrayishBlue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 25px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 175%;
+    left: 86%;
+    margin-left: -80px;
+  
+    p {
+      text-transform: uppercase;
+      color: $grayishBlue;
+      letter-spacing: 3px;
+      font-size: 12px;
+    }
+  
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+      border-bottom: 0;
+      border-top: 10px solid $veryDarkGrayishBlue;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+    }
+  }
+  
+  .hide {
+    visibility: hidden;
+    animation: fadeIn 0.5s;
+  }
+}
